@@ -1,0 +1,32 @@
+# ==========================================
+# Flow API - Robots Exclusion Protocol
+# ==========================================
+
+User-agent: *
+# Permitir que vejam a Home, o Dashboard e a documentação
+Allow: /
+Allow: /dashboard
+Allow: /privacy
+Allow: /status
+
+# BARRAR rotas de processamento e sistema (Evita 401/405 nos logs)
+Disallow: /v1/
+Disallow: /generate
+Disallow: /api/
+Disallow: /usage/
+Disallow: /auth/
+Disallow: /_next/
+Disallow: /app/
+
+# Barrar arquivos sensíveis que bots tentam achar
+Disallow: /.env
+Disallow: /config.py
+Disallow: /blacklist.json
+
+# Indicar onde está o mapa do site para o Google
+Sitemap: https://flow.squareweb.app/sitemap.xml
+
+# ==========================================
+# "Aviso" para bots abusivos (opcional, mas pro)
+# ==========================================
+# Crawl-delay: 10
