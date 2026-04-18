@@ -5,7 +5,6 @@
 **API de IA gratuita e open source — powered by Groq & OpenAI**
 
 [![Status](https://img.shields.io/badge/status-production-a78bfa?style=flat-square)](https://flow.squareweb.app/status)
-[![License](https://img.shields.io/badge/license-MIT-10b981?style=flat-square)](LICENSE)
 [![Made in Brazil](https://img.shields.io/badge/feito_com_%E2%99%A5-no_Brasil-009c3b?style=flat-square)]()
 
 [🌐 flow.squareweb.app](https://flow.squareweb.app) · [📊 Status](https://flow.squareweb.app/status) · [🔒 Privacidade](https://flow.squareweb.app/privacy)
