@@ -1,0 +1,265 @@
+PAYPLUS PROPRIETARY SOFTWARE LICENSE
+=====================================
+Copyright (c) 2026 mozartdev
+Todos os direitos reservados.
+All rights reserved.
+
+=====================================
+LEIA ESTE DOCUMENTO COM ATENÇÃO ANTES DE USAR, COPIAR, MODIFICAR OU
+DISTRIBUIR QUALQUER PARTE DESTE SOFTWARE. AO ACESSAR ESTE REPOSITÓRIO,
+VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
+=====================================
+
+
+1. DEFINIÇÕES
+─────────────────────────────────────────────────────────────────────
+
+1.1. "Software" refere-se a todo o código-fonte, arquivos de configuração,
+     documentação, scripts, esquemas de banco de dados, interfaces de
+     programação de aplicações (APIs), designs de interface de usuário,
+     lógica de negócios e quaisquer outros artefatos presentes neste
+     repositório, incluindo mas não se limitando ao sistema PayPlus e
+     todos os seus componentes.
+
+1.2. "Autor" refere-se a mozartdev, criador original e detentor exclusivo
+     de todos os direitos sobre o Software.
+
+1.3. "Usuário" refere-se a qualquer pessoa física ou jurídica que acesse,
+     visualize, clone, faça download ou interaja de qualquer forma com
+     este repositório ou seu conteúdo.
+
+1.4. "Uso Comercial" refere-se a qualquer utilização do Software, direta
+     ou indiretamente, com o objetivo de obter vantagem financeira,
+     econômica ou comercial, incluindo mas não se limitando a: venda,
+     licenciamento, prestação de serviços, integração em produtos pagos,
+     uso interno em empresas com fins lucrativos, ou qualquer outra forma
+     de exploração econômica.
+
+1.5. "Distribuição" refere-se ao ato de tornar o Software disponível para
+     terceiros por qualquer meio, incluindo mas não se limitando a:
+     publicação em repositórios públicos ou privados, compartilhamento
+     via redes sociais, e-mail, serviços de armazenamento em nuvem,
+     fóruns, plataformas de desenvolvimento ou qualquer outro canal.
+
+1.6. "Obra Derivada" refere-se a qualquer trabalho que seja baseado no
+     Software ou que incorpore qualquer parte dele, incluindo traduções,
+     adaptações, modificações, compilações e transformações.
+
+
+2. CONCESSÃO DE DIREITOS — O QUE É PERMITIDO
+─────────────────────────────────────────────────────────────────────
+
+2.1. VISUALIZAÇÃO EDUCACIONAL: O Autor concede ao Usuário o direito
+     limitado, não exclusivo, intransferível e revogável de visualizar
+     o código-fonte deste repositório exclusivamente para fins de estudo,
+     aprendizado e consulta tecnológica pessoal.
+
+2.2. REFERÊNCIA TÉCNICA: O Usuário pode referenciar conceitos, padrões
+     arquiteturais e abordagens técnicas presentes no Software em
+     trabalhos acadêmicos, artigos ou publicações educacionais, desde
+     que o Autor seja devidamente creditado conforme a Seção 5 deste
+     documento.
+
+2.3. Nenhum outro direito é concedido além dos expressamente descritos
+     nesta Seção 2. Quaisquer direitos não explicitamente concedidos são
+     expressamente reservados ao Autor.
+
+
+3. RESTRIÇÕES — O QUE É ESTRITAMENTE PROIBIDO
+─────────────────────────────────────────────────────────────────────
+
+3.1. CÓPIA E REPRODUÇÃO: É estritamente proibido copiar, reproduzir ou
+     duplicar o Software, no todo ou em parte, por qualquer meio ou em
+     qualquer formato, sem autorização prévia e expressa por escrito
+     do Autor.
+
+3.2. DISTRIBUIÇÃO: É estritamente proibido distribuir, publicar,
+     sublicenciar, vender, alugar, arrendar ou de qualquer outra forma
+     disponibilizar o Software a terceiros, sem autorização prévia e
+     expressa por escrito do Autor.
+
+3.3. MODIFICAÇÃO E OBRAS DERIVADAS: É estritamente proibido modificar,
+     adaptar, traduzir, fazer engenharia reversa, descompilar, desmontar
+     ou criar Obras Derivadas baseadas no Software, sem autorização
+     prévia e expressa por escrito do Autor.
+
+3.4. USO COMERCIAL: É estritamente proibido utilizar o Software, no todo
+     ou em parte, para qualquer finalidade comercial, incluindo mas não
+     se limitando a: integração em produtos ou serviços pagos, uso em
+     ambientes de produção empresarial, prestação de serviços a terceiros
+     baseados no Software, ou qualquer outra forma de exploração
+     econômica direta ou indireta.
+
+3.5. REMOÇÃO DE AVISOS: É estritamente proibido remover, ocultar, alterar
+     ou obscurecer qualquer aviso de direitos autorais, marcas registradas,
+     atribuições ou outros avisos de propriedade presentes no Software.
+
+3.6. IMPLANTAÇÃO NÃO AUTORIZADA: É estritamente proibido implantar,
+     hospedar ou operar instâncias do Software em servidores públicos ou
+     privados sem autorização prévia e expressa por escrito do Autor,
+     exceto para fins de estudo local em ambiente isolado.
+
+3.7. SUBLICENCIAMENTO: É estritamente proibido sublicenciar o Software
+     ou quaisquer direitos sobre ele a terceiros.
+
+3.8. ATRIBUIÇÃO FALSA: É estritamente proibido apresentar o Software ou
+     qualquer Obra Derivada dele como sendo de sua própria autoria,
+     removendo ou omitindo a autoria original de mozartdev.
+
+
+4. SISTEMA DE PAGAMENTOS E INFRAESTRUTURA FINANCEIRA
+─────────────────────────────────────────────────────────────────────
+
+4.1. ATENÇÃO ESPECIAL: Este Software implementa um sistema de pagamentos
+     e infraestrutura financeira real, incluindo integração com redes
+     blockchain (Ethereum), processamento de transações em criptomoedas,
+     sistema de carteira digital (Pluses/P$), APIs de pagamento com
+     autenticação, webhooks com assinatura HMAC e gateway de pagamento
+     completo.
+
+4.2. RISCO DE USO INDEVIDO: O uso não autorizado, cópia ou implantação
+     indevida deste Software pode resultar em:
+     (a) Perdas financeiras diretas para usuários e terceiros;
+     (b) Violações de regulamentações financeiras locais e internacionais;
+     (c) Responsabilidade civil e criminal perante as autoridades
+         competentes;
+     (d) Violações de leis de proteção ao consumidor;
+     (e) Infrações às leis de crimes cibernéticos e fraude eletrônica.
+
+4.3. COMPLIANCE: Qualquer uso autorizado deste Software deve estar em
+     conformidade com todas as leis e regulamentações aplicáveis,
+     incluindo mas não se limitando a legislação sobre serviços de
+     pagamento, prevenção à lavagem de dinheiro (AML), conhecimento do
+     cliente (KYC) e proteção de dados pessoais (LGPD/GDPR).
+
+
+5. ATRIBUIÇÃO E CRÉDITOS
+─────────────────────────────────────────────────────────────────────
+
+5.1. Qualquer referência pública ao Software, seja em artigos, vídeos,
+     apresentações, trabalhos acadêmicos ou qualquer outro meio, deve
+     incluir obrigatoriamente:
+
+     (a) O nome do Autor: mozartdev
+     (b) O nome do projeto: PayPlus
+     (c) Um link para o repositório original
+     (d) A seguinte nota: "Desenvolvido originalmente por mozartdev —
+         Todos os direitos reservados."
+
+5.2. A atribuição deve ser visível, clara e não pode ser minimizada,
+     ocultada ou apresentada de forma a confundir o leitor sobre a
+     autoria original do Software.
+
+
+6. SOLICITAÇÃO DE AUTORIZAÇÃO
+─────────────────────────────────────────────────────────────────────
+
+6.1. Para obter autorização para usos não cobertos por esta licença,
+     incluindo uso comercial, distribuição ou criação de Obras Derivadas,
+     o interessado deve entrar em contato com o Autor através dos canais
+     oficiais disponibilizados no perfil do repositório.
+
+6.2. Autorizações concedidas pelo Autor devem ser documentadas por escrito
+     e assinadas digitalmente para terem validade. Acordos verbais ou
+     informais não constituem autorização válida sob os termos desta
+     licença.
+
+6.3. O Autor reserva-se o direito de conceder ou negar autorizações a seu
+     exclusivo critério, sem necessidade de justificativa.
+
+
+7. AUSÊNCIA DE GARANTIAS
+─────────────────────────────────────────────────────────────────────
+
+7.1. O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA" ("AS IS"),
+     SEM GARANTIAS DE QUALQUER NATUREZA, EXPRESSAS OU IMPLÍCITAS,
+     INCLUINDO MAS NÃO SE LIMITANDO A GARANTIAS DE COMERCIALIZAÇÃO,
+     ADEQUAÇÃO A UM FIM ESPECÍFICO, SEGURANÇA, CORREÇÃO OU NÃO VIOLAÇÃO
+     DE DIREITOS DE TERCEIROS.
+
+7.2. O Autor não garante que o Software estará livre de erros, falhas de
+     segurança, interrupções ou que atenderá a requisitos específicos
+     do Usuário.
+
+7.3. O uso do Software, mesmo que autorizado, é de inteira responsabilidade
+     do Usuário.
+
+
+8. LIMITAÇÃO DE RESPONSABILIDADE
+─────────────────────────────────────────────────────────────────────
+
+8.1. Em nenhuma circunstância o Autor será responsável por quaisquer danos
+     diretos, indiretos, incidentais, especiais, exemplares ou
+     consequenciais, incluindo mas não se limitando a: perda de dados,
+     perda de receita, perda de lucros, perda de oportunidades de negócio,
+     danos à reputação ou quaisquer outras perdas intangíveis, decorrentes
+     do uso ou impossibilidade de uso do Software.
+
+8.2. Esta limitação de responsabilidade aplica-se independentemente da
+     natureza da reclamação (contratual, extracontratual, por negligência
+     ou qualquer outra), mesmo que o Autor tenha sido avisado da
+     possibilidade de tais danos.
+
+
+9. VIGÊNCIA E RESCISÃO
+─────────────────────────────────────────────────────────────────────
+
+9.1. Esta licença entra em vigor no momento em que o Usuário acessa pela
+     primeira vez este repositório ou qualquer parte do Software.
+
+9.2. Esta licença é rescindida automaticamente e imediatamente caso o
+     Usuário viole qualquer um dos termos aqui estabelecidos.
+
+9.3. Após a rescisão, o Usuário deve imediatamente:
+     (a) Cessar todo e qualquer uso do Software;
+     (b) Destruir todas as cópias do Software em sua posse;
+     (c) Remover quaisquer instâncias do Software que esteja operando.
+
+9.4. As Seções 3, 4, 7, 8 e 10 sobrevivem à rescisão desta licença.
+
+
+10. DISPOSIÇÕES GERAIS
+─────────────────────────────────────────────────────────────────────
+
+10.1. LEI APLICÁVEL: Esta licença é regida pelas leis da República
+      Federativa do Brasil. Quaisquer disputas decorrentes desta licença
+      serão submetidas à jurisdição exclusiva dos tribunais brasileiros.
+
+10.2. INTEGRALIDADE: Este documento constitui o acordo completo entre o
+      Autor e o Usuário com relação ao Software e substitui todos os
+      acordos anteriores, escritos ou verbais, sobre o mesmo assunto.
+
+10.3. DIVISIBILIDADE: Se qualquer disposição desta licença for considerada
+      inválida ou inexequível por um tribunal competente, as demais
+      disposições permanecerão em pleno vigor e efeito.
+
+10.4. RENÚNCIA: A falha do Autor em fazer cumprir qualquer disposição
+      desta licença não constituirá renúncia a esse direito no futuro.
+
+10.5. ALTERAÇÕES: O Autor reserva-se o direito de atualizar os termos
+      desta licença a qualquer momento. A versão mais recente sempre
+      prevalecerá sobre versões anteriores.
+
+10.6. IDIOMA: Em caso de conflito entre versões desta licença em diferentes
+      idiomas, a versão em português brasileiro prevalecerá.
+
+
+=====================================
+AVISO FINAL
+=====================================
+
+Este Software representa horas de trabalho, criatividade e expertise
+técnica do seu autor. O respeito pela propriedade intelectual é
+fundamental para um ecossistema tecnológico saudável.
+
+Script kiddies, cloners e infratores: o uso indevido de sistemas de
+pagamento e infraestrutura financeira é crime previsto no Código Penal
+Brasileiro (Art. 171 — Estelionato, Art. 154-A — Invasão de dispositivo
+informático) e pode resultar em processo civil e criminal.
+
+Valorize o trabalho original. Crie o seu próprio.
+
+=====================================
+Copyright (c) 2026 mozartdev — Todos os direitos reservados.
+PayPlus — Gateway de Pagamentos com Pluses (P$)
+=====================================
