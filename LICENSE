@@ -1,25 +1,27 @@
-PAYPLUS PROPRIETARY SOFTWARE LICENSE
-=====================================
+FLOW API PROPRIETARY SOFTWARE LICENSE
+======================================
 Copyright (c) 2026 mozartdev
 Todos os direitos reservados.
 All rights reserved.
 
-=====================================
-LEIA ESTE DOCUMENTO COM ATENÇÃO ANTES DE USAR, COPIAR, MODIFICAR OU
-DISTRIBUIR QUALQUER PARTE DESTE SOFTWARE. AO ACESSAR ESTE REPOSITÓRIO,
-VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
-=====================================
+======================================
+LEIA ESTE DOCUMENTO ANTES DE USAR, COPIAR, MODIFICAR OU DISTRIBUIR
+QUALQUER PARTE DESTE SOFTWARE. AO ACESSAR ESTE REPOSITÓRIO, VOCÊ
+CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
+======================================
 
 
 1. DEFINIÇÕES
 ─────────────────────────────────────────────────────────────────────
 
 1.1. "Software" refere-se a todo o código-fonte, arquivos de configuração,
-     documentação, scripts, esquemas de banco de dados, interfaces de
-     programação de aplicações (APIs), designs de interface de usuário,
-     lógica de negócios e quaisquer outros artefatos presentes neste
-     repositório, incluindo mas não se limitando ao sistema PayPlus e
-     todos os seus componentes.
+     infraestrutura, rotas, middlewares, páginas HTML embutidas, lógica
+     de autenticação, sistema de chaves API, integração com Groq e OpenAI,
+     sistema de roteamento automático de modelos (mode: "auto"), firewall
+     inteligente com blacklist persistente, dashboard de gerenciamento,
+     sistema de rate limiting, integração com Supabase, e todos os demais
+     componentes presentes neste repositório, referenciados coletivamente
+     como "Flow API".
 
 1.2. "Autor" refere-se a mozartdev, criador original e detentor exclusivo
      de todos os direitos sobre o Software.
@@ -29,21 +31,27 @@ VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
      este repositório ou seu conteúdo.
 
 1.4. "Uso Comercial" refere-se a qualquer utilização do Software, direta
-     ou indiretamente, com o objetivo de obter vantagem financeira,
-     econômica ou comercial, incluindo mas não se limitando a: venda,
-     licenciamento, prestação de serviços, integração em produtos pagos,
-     uso interno em empresas com fins lucrativos, ou qualquer outra forma
+     ou indiretamente, com objetivo de obter vantagem financeira, incluindo
+     mas não se limitando a: revenda de acesso à API, criação de produtos
+     derivados pagos, oferta de serviços baseados neste código, monetização
+     via anúncios, integração em SaaS comercial, ou qualquer outra forma
      de exploração econômica.
 
-1.5. "Distribuição" refere-se ao ato de tornar o Software disponível para
-     terceiros por qualquer meio, incluindo mas não se limitando a:
-     publicação em repositórios públicos ou privados, compartilhamento
-     via redes sociais, e-mail, serviços de armazenamento em nuvem,
-     fóruns, plataformas de desenvolvimento ou qualquer outro canal.
+1.5. "Obra Derivada" refere-se a qualquer trabalho baseado no Software,
+     incluindo forks, adaptações, traduções, clones funcionais, wrappers
+     ou qualquer sistema que replique total ou parcialmente a arquitetura,
+     lógica de negócios ou interface deste projeto.
 
-1.6. "Obra Derivada" refere-se a qualquer trabalho que seja baseado no
-     Software ou que incorpore qualquer parte dele, incluindo traduções,
-     adaptações, modificações, compilações e transformações.
+1.6. "Infraestrutura de IA" refere-se especificamente ao sistema de
+     roteamento automático de modelos (AUTO_SYSTEM), ciclo de chaves
+     Groq (key_cycle), lógica de fallback entre provedores, e qualquer
+     outro mecanismo de orquestração de modelos de linguagem presentes
+     neste Software.
+
+1.7. "Sistema de Segurança" refere-se ao middleware de firewall inteligente,
+     sistema de blacklist persistente em JSON, rate limiting por janela
+     de tempo, detecção de IP real via X-Forwarded-For, e banimento
+     automático implementados neste Software.
 
 
 2. CONCESSÃO DE DIREITOS — O QUE É PERMITIDO
@@ -52,13 +60,12 @@ VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
 2.1. VISUALIZAÇÃO EDUCACIONAL: O Autor concede ao Usuário o direito
      limitado, não exclusivo, intransferível e revogável de visualizar
      o código-fonte deste repositório exclusivamente para fins de estudo,
-     aprendizado e consulta tecnológica pessoal.
+     aprendizado pessoal e referência técnica.
 
-2.2. REFERÊNCIA TÉCNICA: O Usuário pode referenciar conceitos, padrões
-     arquiteturais e abordagens técnicas presentes no Software em
-     trabalhos acadêmicos, artigos ou publicações educacionais, desde
-     que o Autor seja devidamente creditado conforme a Seção 5 deste
-     documento.
+2.2. REFERÊNCIA ACADÊMICA: O Usuário pode citar trechos de no máximo
+     10 linhas em trabalhos acadêmicos, artigos técnicos ou apresentações
+     educacionais, desde que o Autor seja devidamente creditado conforme
+     a Seção 5 deste documento.
 
 2.3. Nenhum outro direito é concedido além dos expressamente descritos
      nesta Seção 2. Quaisquer direitos não explicitamente concedidos são
@@ -69,103 +76,111 @@ VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
 ─────────────────────────────────────────────────────────────────────
 
 3.1. CÓPIA E REPRODUÇÃO: É estritamente proibido copiar, reproduzir ou
-     duplicar o Software, no todo ou em parte, por qualquer meio ou em
-     qualquer formato, sem autorização prévia e expressa por escrito
-     do Autor.
+     duplicar o Software, no todo ou em parte, incluindo mas não se
+     limitando a: clonar o repositório para fins não educacionais,
+     reproduzir a arquitetura do sistema de roteamento de modelos,
+     replicar o dashboard, ou copiar o sistema de autenticação com
+     chaves API no formato "flow_".
 
 3.2. DISTRIBUIÇÃO: É estritamente proibido distribuir, publicar,
-     sublicenciar, vender, alugar, arrendar ou de qualquer outra forma
-     disponibilizar o Software a terceiros, sem autorização prévia e
-     expressa por escrito do Autor.
+     sublicenciar, vender ou disponibilizar o Software a terceiros
+     por qualquer meio, sem autorização prévia e expressa por escrito
+     do Autor.
 
-3.3. MODIFICAÇÃO E OBRAS DERIVADAS: É estritamente proibido modificar,
-     adaptar, traduzir, fazer engenharia reversa, descompilar, desmontar
-     ou criar Obras Derivadas baseadas no Software, sem autorização
-     prévia e expressa por escrito do Autor.
+3.3. MODIFICAÇÃO E OBRAS DERIVADAS: É estritamente proibido criar
+     Obras Derivadas baseadas neste Software, incluindo:
+     (a) Forks funcionais hospedados publicamente;
+     (b) Clones com rebranding (ex: renomear "Flow API" para outro nome
+         mantendo a mesma arquitetura);
+     (c) Wrappers que exponham os endpoints deste Software como se fossem
+         de outra origem;
+     (d) Reimplementações da lógica de roteamento automático de modelos.
 
-3.4. USO COMERCIAL: É estritamente proibido utilizar o Software, no todo
-     ou em parte, para qualquer finalidade comercial, incluindo mas não
-     se limitando a: integração em produtos ou serviços pagos, uso em
-     ambientes de produção empresarial, prestação de serviços a terceiros
-     baseados no Software, ou qualquer outra forma de exploração
-     econômica direta ou indireta.
+3.4. USO COMERCIAL: É estritamente proibido utilizar o Software para
+     qualquer finalidade comercial, incluindo mas não se limitando a:
+     (a) Revender acesso à API gerada por este Software;
+     (b) Cobrar pelo acesso ao dashboard ou às chaves geradas;
+     (c) Integrar este Software em produtos ou serviços pagos;
+     (d) Usar a infraestrutura de IA deste projeto para processar
+         requisições de terceiros mediante pagamento.
 
-3.5. REMOÇÃO DE AVISOS: É estritamente proibido remover, ocultar, alterar
-     ou obscurecer qualquer aviso de direitos autorais, marcas registradas,
-     atribuições ou outros avisos de propriedade presentes no Software.
+3.5. REMOÇÃO DE ATRIBUIÇÕES: É estritamente proibido remover, alterar
+     ou obscurecer os créditos ao Autor presentes no código, nas páginas
+     HTML embutidas, no rodapé ("feito com ♥ no Brasil"), ou em qualquer
+     outro componente do Software.
 
 3.6. IMPLANTAÇÃO NÃO AUTORIZADA: É estritamente proibido implantar,
-     hospedar ou operar instâncias do Software em servidores públicos ou
-     privados sem autorização prévia e expressa por escrito do Autor,
-     exceto para fins de estudo local em ambiente isolado.
+     hospedar ou operar instâncias públicas deste Software sem autorização
+     prévia e expressa por escrito do Autor.
 
-3.7. SUBLICENCIAMENTO: É estritamente proibido sublicenciar o Software
-     ou quaisquer direitos sobre ele a terceiros.
+3.7. ENGENHARIA REVERSA DO SISTEMA DE SEGURANÇA: É estritamente proibido
+     analisar, mapear, contornar ou explorar o Sistema de Segurança
+     (firewall, blacklist, rate limiting) para quaisquer fins, incluindo
+     testes de penetração não autorizados.
 
-3.8. ATRIBUIÇÃO FALSA: É estritamente proibido apresentar o Software ou
-     qualquer Obra Derivada dele como sendo de sua própria autoria,
-     removendo ou omitindo a autoria original de mozartdev.
+3.8. USO DAS CHAVES DE TERCEIROS: É estritamente proibido extrair,
+     reutilizar ou expor as chaves de API de provedores terceiros (Groq,
+     OpenAI, Supabase) presentes nas variáveis de ambiente do Software.
 
 
-4. SISTEMA DE PAGAMENTOS E INFRAESTRUTURA FINANCEIRA
+4. INFRAESTRUTURA DE IA E INTEGRAÇÕES
 ─────────────────────────────────────────────────────────────────────
 
-4.1. ATENÇÃO ESPECIAL: Este Software implementa um sistema de pagamentos
-     e infraestrutura financeira real, incluindo integração com redes
-     blockchain (Ethereum), processamento de transações em criptomoedas,
-     sistema de carteira digital (Pluses/P$), APIs de pagamento com
-     autenticação, webhooks com assinatura HMAC e gateway de pagamento
-     completo.
+4.1. ROTEAMENTO AUTOMÁTICO: O sistema AUTO_SYSTEM de seleção inteligente
+     de modelos (mode: "auto") é uma inovação proprietária do Autor.
+     É proibida sua reprodução, adaptação ou utilização em qualquer
+     outro projeto sem autorização expressa.
 
-4.2. RISCO DE USO INDEVIDO: O uso não autorizado, cópia ou implantação
-     indevida deste Software pode resultar em:
-     (a) Perdas financeiras diretas para usuários e terceiros;
-     (b) Violações de regulamentações financeiras locais e internacionais;
-     (c) Responsabilidade civil e criminal perante as autoridades
-         competentes;
-     (d) Violações de leis de proteção ao consumidor;
-     (e) Infrações às leis de crimes cibernéticos e fraude eletrônica.
+4.2. PROVEDORES TERCEIROS: Este Software integra serviços de Groq
+     (groq.com) e OpenAI (openai.com). O uso deste Software não concede
+     ao Usuário qualquer direito sobre as APIs, modelos ou propriedade
+     intelectual desses provedores. Consulte os Termos de Serviço de
+     cada provedor individualmente.
 
-4.3. COMPLIANCE: Qualquer uso autorizado deste Software deve estar em
-     conformidade com todas as leis e regulamentações aplicáveis,
-     incluindo mas não se limitando a legislação sobre serviços de
-     pagamento, prevenção à lavagem de dinheiro (AML), conhecimento do
-     cliente (KYC) e proteção de dados pessoais (LGPD/GDPR).
+4.3. SUPABASE: A integração com Supabase (supabase.com) para autenticação
+     e armazenamento de dados é componente integrante deste Software.
+     A estrutura de tabelas (keys, usage, daily_usage) é design proprietário
+     do Autor e não pode ser replicada sem autorização.
+
+4.4. MODELOS DISPONÍVEIS: A curadoria e configuração dos modelos
+     disponibilizados (GROQ_MODELS, OPENAI_FREE_MODELS, ALLOWED_MODELS)
+     é decisão técnica e editorial do Autor, protegida por esta licença.
 
 
 5. ATRIBUIÇÃO E CRÉDITOS
 ─────────────────────────────────────────────────────────────────────
 
-5.1. Qualquer referência pública ao Software, seja em artigos, vídeos,
-     apresentações, trabalhos acadêmicos ou qualquer outro meio, deve
-     incluir obrigatoriamente:
+5.1. Qualquer referência pública ao Software deve incluir obrigatoriamente:
 
-     (a) O nome do Autor: mozartdev
-     (b) O nome do projeto: PayPlus
-     (c) Um link para o repositório original
-     (d) A seguinte nota: "Desenvolvido originalmente por mozartdev —
-         Todos os direitos reservados."
+     (a) Nome do Autor: mozartdev
+     (b) Nome do projeto: Flow API
+     (c) Link para o repositório original
+     (d) A seguinte nota: "Flow API — desenvolvido originalmente por
+         mozartdev. Todos os direitos reservados."
 
-5.2. A atribuição deve ser visível, clara e não pode ser minimizada,
-     ocultada ou apresentada de forma a confundir o leitor sobre a
-     autoria original do Software.
+5.2. A linha "feito com ♥ no Brasil" presente no rodapé das páginas
+     HTML é marca registrada do projeto e não pode ser removida em
+     nenhuma circunstância, mesmo em usos autorizados.
 
 
-6. SOLICITAÇÃO DE AUTORIZAÇÃO
+6. SISTEMA DE SEGURANÇA — AVISO ESPECIAL
 ─────────────────────────────────────────────────────────────────────
 
-6.1. Para obter autorização para usos não cobertos por esta licença,
-     incluindo uso comercial, distribuição ou criação de Obras Derivadas,
-     o interessado deve entrar em contato com o Autor através dos canais
-     oficiais disponibilizados no perfil do repositório.
+6.1. Este Software implementa um Sistema de Segurança ativo que inclui:
+     (a) Firewall inteligente com detecção de IP real;
+     (b) Rate limiting por janela de tempo (10 req / 10s por padrão);
+     (c) Blacklist persistente em arquivo JSON;
+     (d) Banimento automático de IPs abusivos;
+     (e) Limite diário de requisições por chave API.
 
-6.2. Autorizações concedidas pelo Autor devem ser documentadas por escrito
-     e assinadas digitalmente para terem validade. Acordos verbais ou
-     informais não constituem autorização válida sob os termos desta
-     licença.
+6.2. TENTATIVAS DE ABUSO: Qualquer tentativa de contornar, explorar ou
+     atacar o Sistema de Segurança deste Software pode constituir crime
+     previsto no Art. 154-A do Código Penal Brasileiro (Invasão de
+     Dispositivo Informático) e será tratada como tal.
 
-6.3. O Autor reserva-se o direito de conceder ou negar autorizações a seu
-     exclusivo critério, sem necessidade de justificativa.
+6.3. RESPONSABILIDADE: O Autor não se responsabiliza por banimentos
+     automáticos decorrentes do uso legítimo que exceda os limites
+     configurados. O Usuário deve respeitar os rate limits estabelecidos.
 
 
 7. AUSÊNCIA DE GARANTIAS
@@ -173,93 +188,107 @@ VOCÊ CONCORDA AUTOMATICAMENTE COM OS TERMOS AQUI ESTABELECIDOS.
 
 7.1. O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA" ("AS IS"),
      SEM GARANTIAS DE QUALQUER NATUREZA, EXPRESSAS OU IMPLÍCITAS,
-     INCLUINDO MAS NÃO SE LIMITANDO A GARANTIAS DE COMERCIALIZAÇÃO,
-     ADEQUAÇÃO A UM FIM ESPECÍFICO, SEGURANÇA, CORREÇÃO OU NÃO VIOLAÇÃO
-     DE DIREITOS DE TERCEIROS.
+     INCLUINDO MAS NÃO SE LIMITANDO A GARANTIAS DE DISPONIBILIDADE
+     CONTÍNUA, SEGURANÇA ABSOLUTA, COMPATIBILIDADE COM VERSÕES FUTURAS
+     DOS PROVEDORES GROQ E OPENAI, OU ADEQUAÇÃO A FINS ESPECÍFICOS.
 
-7.2. O Autor não garante que o Software estará livre de erros, falhas de
-     segurança, interrupções ou que atenderá a requisitos específicos
-     do Usuário.
+7.2. O Autor não garante que o Software estará livre de erros, falhas
+     de segurança, limitações de rate limit dos provedores externos,
+     ou que os modelos de IA listados permanecerão disponíveis
+     indefinidamente.
 
-7.3. O uso do Software, mesmo que autorizado, é de inteira responsabilidade
-     do Usuário.
+7.3. O desempenho do Software depende de serviços de terceiros (Groq,
+     OpenAI, Supabase) sobre os quais o Autor não tem controle.
 
 
 8. LIMITAÇÃO DE RESPONSABILIDADE
 ─────────────────────────────────────────────────────────────────────
 
-8.1. Em nenhuma circunstância o Autor será responsável por quaisquer danos
-     diretos, indiretos, incidentais, especiais, exemplares ou
-     consequenciais, incluindo mas não se limitando a: perda de dados,
-     perda de receita, perda de lucros, perda de oportunidades de negócio,
-     danos à reputação ou quaisquer outras perdas intangíveis, decorrentes
-     do uso ou impossibilidade de uso do Software.
+8.1. Em nenhuma circunstância o Autor será responsável por quaisquer
+     danos decorrentes do uso ou impossibilidade de uso do Software,
+     incluindo mas não se limitando a:
+     (a) Custos gerados pelo consumo das APIs de Groq ou OpenAI;
+     (b) Vazamento de dados decorrente de má configuração pelo Usuário;
+     (c) Banimentos ou suspensões de conta nos provedores terceiros;
+     (d) Perda de dados armazenados no Supabase;
+     (e) Interrupções de serviço causadas por provedores externos.
 
-8.2. Esta limitação de responsabilidade aplica-se independentemente da
-     natureza da reclamação (contratual, extracontratual, por negligência
-     ou qualquer outra), mesmo que o Autor tenha sido avisado da
-     possibilidade de tais danos.
+8.2. O Usuário é inteiramente responsável pela segurança de suas
+     variáveis de ambiente (GROQ_KEY*, OPENAI_KEY, SUPABASE_URL,
+     SUPABASE_SERVICE_KEY) e pelo armazenamento seguro das chaves
+     API geradas pelo Software.
 
 
 9. VIGÊNCIA E RESCISÃO
 ─────────────────────────────────────────────────────────────────────
 
-9.1. Esta licença entra em vigor no momento em que o Usuário acessa pela
-     primeira vez este repositório ou qualquer parte do Software.
+9.1. Esta licença entra em vigor no momento em que o Usuário acessa
+     pela primeira vez este repositório ou qualquer parte do Software.
 
-9.2. Esta licença é rescindida automaticamente e imediatamente caso o
-     Usuário viole qualquer um dos termos aqui estabelecidos.
+9.2. Esta licença é rescindida automaticamente e imediatamente caso
+     o Usuário viole qualquer um dos termos aqui estabelecidos, em
+     especial os itens 3.1 a 3.8.
 
 9.3. Após a rescisão, o Usuário deve imediatamente:
      (a) Cessar todo e qualquer uso do Software;
      (b) Destruir todas as cópias do Software em sua posse;
-     (c) Remover quaisquer instâncias do Software que esteja operando.
+     (c) Desativar quaisquer instâncias do Software em operação;
+     (d) Revogar quaisquer chaves API geradas a partir deste Software.
 
-9.4. As Seções 3, 4, 7, 8 e 10 sobrevivem à rescisão desta licença.
+9.4. As Seções 3, 4, 6, 7, 8 e 10 sobrevivem à rescisão desta licença.
 
 
 10. DISPOSIÇÕES GERAIS
 ─────────────────────────────────────────────────────────────────────
 
 10.1. LEI APLICÁVEL: Esta licença é regida pelas leis da República
-      Federativa do Brasil. Quaisquer disputas decorrentes desta licença
-      serão submetidas à jurisdição exclusiva dos tribunais brasileiros.
+      Federativa do Brasil. Quaisquer disputas serão submetidas à
+      jurisdição exclusiva dos tribunais brasileiros.
 
-10.2. INTEGRALIDADE: Este documento constitui o acordo completo entre o
-      Autor e o Usuário com relação ao Software e substitui todos os
-      acordos anteriores, escritos ou verbais, sobre o mesmo assunto.
+10.2. CRIMES APLICÁVEIS: O uso indevido deste Software pode configurar,
+      entre outros:
+      (a) Art. 154-A CP — Invasão de dispositivo informático;
+      (b) Art. 171 CP — Estelionato (uso comercial não autorizado);
+      (c) Art. 184 CP — Violação de direito autoral;
+      (d) Lei 9.609/98 — Lei de Software (proteção de programas
+          de computador no Brasil);
+      (e) Lei 9.610/98 — Lei de Direitos Autorais.
 
-10.3. DIVISIBILIDADE: Se qualquer disposição desta licença for considerada
-      inválida ou inexequível por um tribunal competente, as demais
-      disposições permanecerão em pleno vigor e efeito.
+10.3. INTEGRALIDADE: Este documento constitui o acordo completo entre
+      o Autor e o Usuário com relação ao Software.
 
-10.4. RENÚNCIA: A falha do Autor em fazer cumprir qualquer disposição
-      desta licença não constituirá renúncia a esse direito no futuro.
+10.4. DIVISIBILIDADE: Se qualquer disposição desta licença for
+      considerada inválida, as demais permanecerão em pleno vigor.
 
 10.5. ALTERAÇÕES: O Autor reserva-se o direito de atualizar os termos
       desta licença a qualquer momento. A versão mais recente sempre
-      prevalecerá sobre versões anteriores.
+      prevalecerá.
 
-10.6. IDIOMA: Em caso de conflito entre versões desta licença em diferentes
-      idiomas, a versão em português brasileiro prevalecerá.
+10.6. IDIOMA: Em caso de conflito entre versões em diferentes idiomas,
+      a versão em português brasileiro prevalecerá.
 
 
-=====================================
+======================================
 AVISO FINAL
-=====================================
+======================================
 
-Este Software representa horas de trabalho, criatividade e expertise
-técnica do seu autor. O respeito pela propriedade intelectual é
-fundamental para um ecossistema tecnológico saudável.
+A Flow API representa uma arquitetura técnica cuidadosamente projetada,
+incluindo roteamento inteligente de modelos de IA, sistema de autenticação
+com chaves proprietárias, firewall com blacklist persistente, integração
+multi-provedor (Groq + OpenAI) e dashboard completo de gerenciamento.
 
-Script kiddies, cloners e infratores: o uso indevido de sistemas de
-pagamento e infraestrutura financeira é crime previsto no Código Penal
-Brasileiro (Art. 171 — Estelionato, Art. 154-A — Invasão de dispositivo
-informático) e pode resultar em processo civil e criminal.
+Cada linha deste código é resultado de horas de trabalho, pesquisa e
+engenharia de software aplicada. Copiar não é aprender.
 
-Valorize o trabalho original. Crie o seu próprio.
+Script kiddies e cloners: a reprodução não autorizada de sistemas de
+infraestrutura de IA pode resultar em processos civis e criminais nos
+termos da Lei 9.609/98, Lei 9.610/98 e do Código Penal Brasileiro.
 
-=====================================
+Se quiser usar, colaborar ou licenciar: entre em contato.
+Se quiser copiar: aprenda a construir o seu próprio.
+
+======================================
 Copyright (c) 2026 mozartdev — Todos os direitos reservados.
-PayPlus — Gateway de Pagamentos com Pluses (P$)
-=====================================
+Flow API — Gateway de IA com Groq & OpenAI
+"feito com ♥ no Brasil"
+======================================
