@@ -105,4 +105,11 @@ Para dúvidas ou sugestões, abra uma [issue](../../issues) ou fale pelo chat no
 
 ## Licença
 
-MIT — use, modifique e distribua à vontade. Feito com ♥ no Brasil.
+Feito com ♥ no Brasil.
+
+
+
+
+## ⚠️ Nota de Direitos de Autor e Uso
+
+**ESTE CÓDIGO É DISPONIBILIZADO EXCLUSIVAMENTE PARA FINS EDUCACIONAIS E CONSULTA TECNOLÓGICA. A reprodução, cópia ou distribuição deste material sem autorização prévia é estritamente proibida. Valorize o trabalho original; o uso indevido de sistemas de infraestrutura e pagamento pode resultar em complicações legais e técnicas graves.**
